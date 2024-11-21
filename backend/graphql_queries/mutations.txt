@@ -1,0 +1,39 @@
+
+mutation{
+  consentir(input:{
+    id_titular:1111
+    id_consentimento:2
+  }){
+    id_consentimento
+    data_consentimento
+    final_consentimento
+    status_consentimento
+    
+  }
+}
+
+
+mutation{
+  revogar_consentimento(input:{
+    id_titular:1111
+    id_consentimento:2
+  }){
+    id_consentimento
+    data_consentimento
+    final_consentimento
+    status_consentimento
+    
+  }
+}
+
+mutation{
+  criar_consentimento(input:{
+    id_titular:6666
+    titulo_proposito: "Cumprimento de obrigações do poder Público"
+    id_controlador:404
+    acoes:["Transferir dados para Instituições Pública",
+      "Registrar atividades de Obrigaçoes Civis "
+  }){
+    
+  }
+}

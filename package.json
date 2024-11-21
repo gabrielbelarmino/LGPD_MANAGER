@@ -1,0 +1,12 @@
+{
+    "name": "lgpd_manager",
+    "version": "0.1.0",
+    "description": "PROJETO - Segurança em Redes de Computadores ",
+    "scripts": {
+      "local": "docker-compose -f docker-compose.yml -f docker-compose.local.yml",
+      "local:seed": "docker-compose -f docker-compose.yml -f docker-compose.local.yml exec backend npx knex seed:run"
+    },
+    "author": "Gabriel Belarmino",
+    "private": true
+  }
+  

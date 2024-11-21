@@ -1,0 +1,49 @@
+version: "3.3"
+
+services:
+  proxy:
+    container_name: proxy
+    image: nginx:alpine
+    restart: always
+    networks:
+      - base
+
+  backend:
+    container_name: backend
+    restart: always
+    build:
+      context: "./backend"
+    ports:
+      - "8080"
+      - "4000"
+    networks:
+      - base
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+      
+  db:
+    image: postgres:12.0
+    container_name: db
+    ports:
+      - "5432"
+    networks:
+      - base
+
+  pgadmin:
+    image: dpage/pgadmin4:4.14
+    container_name: pgadmin
+    env_file:
+      - ./config/local/.env
+    ports:
+      - "5431:80"
+    volumes:
+      - "pgadmin:/var/lib/pgadmin"
+    networks:
+      - base
+
+networks:
+  base:
+
+volumes:
+  pgadmin:

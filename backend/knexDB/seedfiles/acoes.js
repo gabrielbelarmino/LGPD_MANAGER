@@ -1,0 +1,27 @@
+module.exports = `insert into "Acoes" ("nome_acao","id_proposito") values
+( 'Registrar Usuário',1),
+( 'Registrar Atividades',1),
+( 'Registrar Usuário',2),
+( 'Registrar Atividades',2),
+( 'Cadastrar Cartões de Pagamento',2),
+( 'Processar Pagamento',2),
+( 'Acompanhar o seguimente de Diretrizes e Legislaçoes',3),
+( 'Cadastrar Dados',3),
+( 'Prover Serviços Educacionais',3),
+('Gerar Historico de Atividades',3),
+('Transferir dados para Instituições Pública',4),
+('Registrar atividades de Obrigaçoes Civis ',4),
+('Cadastrar Cartões de Pagamento',5),
+('Registrar Usuário',5),
+('Registrar Atividades',5),
+('Analisar Historico de Saúde',6),
+('Analisar de Atividades e Postagens',6),
+('Analisar Redes de Contatos',6),
+('Obter Localização do Titular',6),
+('Mineracao de Dados',7),
+('Análise de Sentimento',7),
+('Registrar Compras',7),
+('Analisar Serviços Consumidos',7),
+('Analisar Historico de Saúde',7)
+
+`
